@@ -18,7 +18,7 @@ public class StudentsListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_students_list);
 
         Intent intent = getIntent();
-        String grpNumber = (String) intent.getStringExtra(GROUP_NUMBER);
+        String grpNumber = intent.getStringExtra(GROUP_NUMBER);
 
         String txtStudents="";
         for (Student s: Student.getStudents(grpNumber)){
@@ -44,7 +44,7 @@ public class StudentsListActivity extends AppCompatActivity {
     }
     public void onPlusBtnClick(View view){
         textSize=textSize * 1.1f;
-        TextView textView = (TextView) findViewById(R.id.text);
+        TextView textView = findViewById(R.id.text);
         textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
     }
 

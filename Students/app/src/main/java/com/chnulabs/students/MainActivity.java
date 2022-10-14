@@ -9,16 +9,17 @@ import android.view.View;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
+
     private int seconds=0;
     private Boolean isRunning=true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         if (savedInstanceState !=null){
             seconds = savedInstanceState.getInt("seconds");
         }
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     private void runTime(){
-        final TextView timeView=(TextView)findViewById(R.id.text);
+        final TextView timeView = (TextView) findViewById(R.id.textView);
         final Handler handler = new Handler();
         handler.post(new Runnable() {
             @Override
